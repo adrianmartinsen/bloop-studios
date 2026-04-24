@@ -581,7 +581,8 @@ ol {
   grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
 }
 @media (min-width: 1200px) {
-  .focus__grid:has(> article:nth-child(3)) {
+  /* Only use 3 columns if we have at least 3 items */
+  .focus__grid:has(> :nth-child(3)) {
     grid-template-columns: repeat(3, 1fr);
     justify-content: start;
   }
@@ -648,9 +649,14 @@ ol {
   grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
 }
 
+.releases__grid a {
+  display: block;
+  text-decoration: none;
+}
+
 @media (min-width: 1200px) {
   /* Only use 3 columns if we have at least 3 items */
-  .releases__grid:has(> article:nth-child(3)) {
+  .releases__grid:has(> :nth-child(3)) {
     grid-template-columns: repeat(3, 1fr);
     justify-content: start;
   }
@@ -672,7 +678,6 @@ ol {
 .app-card__img {
   position: relative;
   top: -30px;
-  /* scale: 0.95; */
   width: 100%;
   /* height: 100%; */
   /* object-fit: cover; */
@@ -734,6 +739,12 @@ ol {
 }
 .app-card:hover .app-card__desc {
   opacity: 1;
+}
+
+@media (max-width: 1400px) {
+  .app-card__desc {
+    opacity: 1;
+  }
 }
 
 /* -----------------------------------------------------------------------------
