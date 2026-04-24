@@ -1,0 +1,44 @@
+# hugo.toml
+baseURL      = "https://example.com/"
+languageCode = "en-us"
+title        = "Bloop Studios"
+
+[[menus.main]]
+  name   = "Our Apps"
+  url    = "/apps"
+  weight = 10
+
+[[menus.main]]
+  name   = "Portfolio"
+  url    = "/portfolio"
+  weight = 20
+
+[[menus.main]]
+  name   = "Process"
+  url    = "/process"
+  weight = 30
+
+[[menus.main]]
+  name   = "About"
+  url    = "/about"
+  weight = 40
+
+[[menus.footer]]
+  name   = "Privacy Policy"
+  url    = "/privacy"
+  weight = 10
+
+[[menus.footer]]
+  name   = "Terms of Use"
+  url    = "/terms"
+  weight = 20
+
+[[menus.footer]]
+  name   = "App Support"
+  url    = "/support"
+  weight = 30
+
+[[menus.footer]]
+  name   = "Press Kit"
+  url    = "/press"
+  weight = 40

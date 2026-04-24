@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article class="single-page">
+  <header class="single-page__header">
+    <span class="label-sm">{{ .Section | humanize }}</span>
+    <h1 class="headline-lg">{{ .Title }}</h1>
+    {{ with .Description }}<p class="body-lg">{{ . }}</p>{{ end }}
+  </header>
+  <div class="single-page__body">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

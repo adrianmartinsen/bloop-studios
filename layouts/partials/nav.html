@@ -1,0 +1,41 @@
+<nav class="nav" aria-label="Main navigation">
+  <div class="container nav__inner">
+
+    <a href="{{ "/" | relURL }}" class="nav__logo" aria-label="{{ .Site.Title }} home">
+      {{ .Site.Title }}
+    </a>
+    <!-- No need to nav links as we don't have any pages -->
+    <!-- <ul class="nav__links" role="list">
+      {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul> -->
+    <!-- Removed button as we have no /apps page yet -->
+    <!-- <a href="/apps" class="btn-nav hide-mobile">Download Apps</a> -->
+
+    <!-- No menu for now -->
+    <!-- <button
+      id="nav-hamburger"
+      class="nav__hamburger"
+      aria-controls="nav-mobile-menu"
+      aria-expanded="false"
+      aria-label="Toggle navigation menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button> -->
+
+  </div>
+
+  <div id="nav-mobile-menu" class="nav__mobile-menu" role="menu">
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}" role="menuitem">{{ .Name }}</a>
+    {{ end }}
+  </div>
+
+</nav>

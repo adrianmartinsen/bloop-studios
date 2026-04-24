@@ -1,0 +1,15 @@
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__logo">{{ .Site.Title }}</div>
+    <!-- Removed links in the footer as I don't have any yet -->
+    <!-- <nav class="footer__links" aria-label="Footer navigation">
+      {{ range .Site.Menus.footer }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav> -->
+
+    <div class="footer__copy">
+      &copy; {{ now.Year }} {{ .Site.Title }}. Built for the future.
+    </div>
+  </div>
+</footer>
