@@ -4,19 +4,17 @@
     <div class="releases__header">
       <div>
         <span class="label-sm">In-House Products</span>
-        <h2 id="releases-heading" class="headline-lg">Active Releases</h2>
+        <h2 id="releases-heading" class="headline-lg">Featured Releases</h2>
       </div>
-      <!-- No Apps page yet, also the arrow isn't in line with the text -->
-      <!-- <a href="/apps" class="btn-link hide-mobile" aria-label="Store Listings — full list">
-        Store Listings
-        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
-      </a> -->
+      <!-- <div style="display: flex;"> -->
+        <a href="/apps" class="btn-link hide-mobile" aria-label="Apps Listings — full list">All Apps<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+      <!-- </div> -->
     </div>
 
     <div class="releases__grid">
 
-      <a href="https://play.google.com/store/apps/details?id=com.adrianmartinsen.allow_me" target="_blank">
-        <article class="app-card">
+      
+        <article class="app-card"><a href="https://play.google.com/store/apps/details?id=com.adrianmartinsen.allow_me" target="_blank">
           <img
             class="app-card__img"
             src="{{ "images/app-allowme.png" | relURL }}"
@@ -29,8 +27,9 @@
             <h3 class="app-card__title">AllowMe</h3>
             <p class="app-card__desc">Allowance Tracker app to keep control of your kids pocket money.</p>
           </div>
+          </a>
         </article>
-      </a>
+      
 
       <!-- <article class="app-card app-card--offset">
         <img
@@ -47,8 +46,9 @@
         </div>
       </article> -->
 
-      <a href="https://play.google.com/store/apps/details?id=com.adrianmartinsen.underspend" target="_blank">
+      
         <article class="app-card">
+          <a href="https://play.google.com/store/apps/details?id=com.adrianmartinsen.underspend" target="_blank">
           <img
             class="app-card__img"
             src="{{ "images/app-underspend.png" | relURL }}"
@@ -61,8 +61,9 @@
             <h3 class="app-card__title">Underspend</h3>
             <p class="app-card__desc">Grocery list app with a built in budget so you never spend too much again.</p>
           </div>
+          </a>
         </article>
-      </a>
+      
 
     </div>
   </div>

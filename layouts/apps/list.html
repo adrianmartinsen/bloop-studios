@@ -1,0 +1,66 @@
+{{ define "main" }}
+<div class="apps-list-page">
+
+  <header class="page-header">
+    <div class="container">
+      <span class="label-sm">Bloop Studios</span>
+      <h1 class="page-header__title">Our Apps</h1>
+      <p class="page-header__body">
+        Mobile apps built for everyday life — available on Android and iOS.
+        Every app includes a full 30-day free trial. No credit card required.
+      </p>
+    </div>
+  </header>
+
+  <section class="apps-list">
+    <div class="container">
+      {{ range .Pages.ByParam "weight" }}
+      <article class="app-listing">
+
+        <div class="app-listing__icon">
+          {{ with .Params.icon }}
+          <img src="{{ . | relURL }}" alt="{{ $.Title }} app icon" />
+          {{ else }}
+          <div class="app-listing__icon-placeholder">
+            <span class="material-symbols-outlined">apps</span>
+          </div>
+          {{ end }}
+        </div>
+
+        <div class="app-listing__content">
+          <div class="app-listing__meta">
+            <span class="label-sm">{{ .Params.category }}</span>
+            <div class="app-listing__platforms">
+              {{ range .Params.platforms }}
+              <span class="platform-badge">{{ . }}</span>
+              {{ end }}
+            </div>
+          </div>
+          <h2 class="app-listing__title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h2>
+          <p class="app-listing__tagline">{{ .Params.tagline }}</p>
+          <div class="app-listing__actions">
+            <a href="{{ .RelPermalink }}" class="btn-primary">Learn more</a>
+            {{ with .Params.googlePlay }}
+            <a href="{{ . }}" class="btn-secondary" target="_blank" rel="noopener">
+              <span class="material-symbols-outlined" aria-hidden="true">android</span>
+              Google Play
+            </a>
+            {{ end }}
+            {{ with .Params.appStore }}
+            <a href="{{ . }}" class="btn-secondary" target="_blank" rel="noopener">
+              <span class="material-symbols-outlined" aria-hidden="true">apple</span>
+              App Store
+            </a>
+            {{ end }}
+          </div>
+        </div>
+
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+</div>
+{{ end }}

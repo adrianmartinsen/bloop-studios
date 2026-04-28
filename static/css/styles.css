@@ -269,16 +269,16 @@ ol {
 }
 
 .btn-link {
-  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.2rem;
   color: var(--primary);
   font-family: var(--font-headline);
   font-weight: 700;
   transition: gap var(--t-base);
 }
+
 .btn-link:hover {
-  gap: 1rem;
+  gap: 0.7rem;
 }
 
 /* -----------------------------------------------------------------------------
@@ -290,7 +290,7 @@ ol {
 
 @media (min-width: 768px) {
   .hide-mobile {
-    display: unset;
+    display: inline-flex;
   }
   .hide-desktop {
     display: none;
@@ -920,4 +920,247 @@ ol {
 .single-page__body li {
   margin-bottom: 0.5rem;
   color: var(--on-surface-variant);
+}
+
+/* -----------------------------------------------------------------------------
+   17. PAGE HEADER (shared by About, Privacy, Apps list)
+   ----------------------------------------------------------------------------- */
+.page-header {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  background-color: var(--surface);
+  position: relative;
+}
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(68, 223, 171, 0.06) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+.page-header .label-sm {
+  display: block;
+  margin-bottom: 1rem;
+}
+.page-header__title {
+  font-family: var(--font-headline);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.page-header__body {
+  font-size: 1.15rem;
+  color: var(--on-surface-variant);
+  max-width: 40rem;
+  line-height: 1.7;
+}
+
+/* -----------------------------------------------------------------------------
+   18. APPS LIST PAGE
+   ----------------------------------------------------------------------------- */
+.apps-list {
+  padding-block: 5rem;
+  background-color: var(--surface-container-low);
+}
+
+.app-listing {
+  display: grid;
+  gap: 2rem;
+  padding: 2.5rem;
+  background-color: var(--surface-container-high);
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+  transition: transform var(--t-base);
+}
+.app-listing:hover {
+  transform: translateY(-2px);
+}
+.app-listing:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .app-listing {
+    grid-template-columns: 6rem 1fr;
+    align-items: start;
+  }
+}
+
+.app-listing__icon {
+  width: 6rem;
+  height: 6rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background-color: var(--surface-container-highest);
+  flex-shrink: 0;
+}
+.app-listing__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-listing__icon-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+.app-listing__icon-placeholder .material-symbols-outlined {
+  font-size: 2.5rem;
+}
+
+.app-listing__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.app-listing__platforms {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.platform-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  background-color: var(--surface-container-highest);
+  color: var(--on-surface-variant);
+}
+
+.app-listing__title {
+  font-family: var(--font-headline);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+.app-listing__title a {
+  transition: color var(--t-fast);
+}
+.app-listing__title a:hover {
+  color: var(--primary);
+}
+
+.app-listing__tagline {
+  color: var(--on-surface-variant);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 36rem;
+}
+
+.app-listing__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+/* Smaller buttons for the list view */
+.app-listing__actions .btn-primary,
+.app-listing__actions .btn-secondary {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+/* -----------------------------------------------------------------------------
+   19. APP SINGLE PAGE
+   ----------------------------------------------------------------------------- */
+.app-page__header {
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+  background-color: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-page__header-glow {
+  position: absolute;
+  top: -5rem;
+  right: -5rem;
+  width: 30rem;
+  height: 30rem;
+  background: rgba(68, 223, 171, 0.07);
+  border-radius: var(--radius-full);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.app-page__header-inner {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 640px) {
+  .app-page__header-inner {
+    grid-template-columns: 8rem 1fr;
+  }
+}
+
+.app-page__icon {
+  width: 8rem;
+  height: 8rem;
+  border-radius: calc(var(--radius) * 1.25);
+  overflow: hidden;
+  background-color: var(--surface-container-highest);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+.app-page__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-page__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.app-page__title {
+  font-family: var(--font-headline);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.app-page__tagline {
+  font-size: 1.15rem;
+  color: var(--on-surface-variant);
+  line-height: 1.6;
+  max-width: 36rem;
+  margin-bottom: 2rem;
+}
+
+.app-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.app-page__body {
+  padding-block: 5rem;
+  background-color: var(--surface-container-low);
+}
+
+.app-page__body-inner {
+  max-width: 48rem;
 }

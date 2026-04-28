@@ -4,8 +4,8 @@
     <a href="{{ "/" | relURL }}" class="nav__logo" aria-label="{{ .Site.Title }} home">
       {{ .Site.Title }}
     </a>
-    <!-- No need to nav links as we don't have any pages -->
-    <!-- <ul class="nav__links" role="list">
+
+    <ul class="nav__links" role="list">
       {{ range .Site.Menus.main }}
       <li>
         <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>
@@ -13,12 +13,12 @@
         </a>
       </li>
       {{ end }}
-    </ul> -->
+    </ul>
     <!-- Removed button as we have no /apps page yet -->
     <!-- <a href="/apps" class="btn-nav hide-mobile">Download Apps</a> -->
 
-    <!-- No menu for now -->
-    <!-- <button
+    <!-- MOBILE MENU HAMBURGER BUTTON -->
+    <button
       id="nav-hamburger"
       class="nav__hamburger"
       aria-controls="nav-mobile-menu"
@@ -28,7 +28,7 @@
       <span></span>
       <span></span>
       <span></span>
-    </button> -->
+    </button>
 
   </div>
 

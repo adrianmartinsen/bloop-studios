@@ -1,0 +1,59 @@
+{{ define "main" }}
+<div class="app-page">
+
+  <header class="app-page__header">
+    <div class="container app-page__header-inner">
+
+      <div class="app-page__icon">
+        {{ with .Params.icon }}
+        <img src="{{ . | relURL }}" alt="{{ $.Title }} app icon" />
+        {{ else }}
+        <div class="app-listing__icon-placeholder">
+          <span class="material-symbols-outlined">apps</span>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="app-page__header-text">
+        <div class="app-page__meta">
+          <span class="label-sm">{{ .Params.category }}</span>
+          <div class="app-listing__platforms">
+            {{ range .Params.platforms }}
+            <span class="platform-badge">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+        <h1 class="app-page__title">{{ .Title }}</h1>
+        <p class="app-page__tagline">{{ .Params.tagline }}</p>
+
+        <div class="app-page__actions">
+          {{ with .Params.googlePlay }}
+          <a href="{{ . }}" class="btn-primary" target="_blank" rel="noopener">
+            <span class="material-symbols-outlined" aria-hidden="true">android</span>
+            Get on Google Play
+          </a>
+          {{ end }}
+          {{ with .Params.appStore }}
+          <a href="{{ . }}" class="btn-primary" target="_blank" rel="noopener">
+            <span class="material-symbols-outlined" aria-hidden="true">apple</span>
+            Download on App Store
+          </a>
+          {{ end }}
+          <a href="/apps" class="btn-secondary">← All apps</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="app-page__header-glow" aria-hidden="true"></div>
+  </header>
+
+  <section class="app-page__body">
+    <div class="container app-page__body-inner">
+      <div class="app-page__content single-page__body">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+
+</div>
+{{ end }}

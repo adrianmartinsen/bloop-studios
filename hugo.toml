@@ -1,5 +1,5 @@
 # hugo.toml
-baseURL      = "https://example.com/"
+baseURL      = "https://www.bloopstudios.no/"
 languageCode = "en-us"
 title        = "Bloop Studios"
 
@@ -9,36 +9,13 @@ title        = "Bloop Studios"
   weight = 10
 
 [[menus.main]]
-  name   = "Portfolio"
-  url    = "/portfolio"
-  weight = 20
-
-[[menus.main]]
-  name   = "Process"
-  url    = "/process"
-  weight = 30
-
-[[menus.main]]
-  name   = "About"
+  name   = "About Bloop"
   url    = "/about"
-  weight = 40
+  weight = 20
 
 [[menus.footer]]
   name   = "Privacy Policy"
   url    = "/privacy"
   weight = 10
 
-[[menus.footer]]
-  name   = "Terms of Use"
-  url    = "/terms"
-  weight = 20
 
-[[menus.footer]]
-  name   = "App Support"
-  url    = "/support"
-  weight = 30
-
-[[menus.footer]]
-  name   = "Press Kit"
-  url    = "/press"
-  weight = 40
