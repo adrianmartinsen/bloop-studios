@@ -1,11 +1,11 @@
 ---
 title: "AllowMe"
 description: "Track allowances for your children. Simple, private, and always up to date."
-tagline: "Manage and track allowances for your children. Keep history of every penny."
+tagline: "Manage and track allowances for your children."
 category: "Parenting"
-platforms: ["Android"]
+platforms: ["Android", "iOS"]
 googlePlay: "https://play.google.com/store/apps/details?id=com.adrianmartinsen.allow_me"
-appStore: ""
+appStore: "https://apps.apple.com/us/app/allowme-allowance-tracker/id6766824617"
 icon: "images/apps/allowme-icon.png"
 weight: 2
 ---

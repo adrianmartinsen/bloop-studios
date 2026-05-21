@@ -1,6 +1,5 @@
 {{ define "main" }}
 <div class="apps-list-page">
-
   <header class="page-header">
     <div class="container">
       <span class="label-sm">Bloop Studios</span>
@@ -16,7 +15,6 @@
     <div class="container">
       {{ range .Pages.ByParam "weight" }}
       <article class="app-listing">
-
         <div class="app-listing__icon">
           {{ with .Params.icon }}
           <img src="{{ . | relURL }}" alt="{{ $.Title }} app icon" />
@@ -43,24 +41,35 @@
           <div class="app-listing__actions">
             <a href="{{ .RelPermalink }}" class="btn-primary">Learn more</a>
             {{ with .Params.googlePlay }}
-            <a href="{{ . }}" class="btn-secondary" target="_blank" rel="noopener">
-              <span class="material-symbols-outlined" aria-hidden="true">android</span>
+            <a
+              href="{{ . }}"
+              class="btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >android</span
+              >
               Google Play
             </a>
-            {{ end }}
-            {{ with .Params.appStore }}
-            <a href="{{ . }}" class="btn-secondary" target="_blank" rel="noopener">
-              <span class="material-symbols-outlined" aria-hidden="true">apple</span>
+            {{ end }} {{ with .Params.appStore }}
+            <a
+              href="{{ . }}"
+              class="btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >ios</span
+              >
               App Store
             </a>
             {{ end }}
           </div>
         </div>
-
       </article>
       {{ end }}
     </div>
   </section>
-
 </div>
 {{ end }}

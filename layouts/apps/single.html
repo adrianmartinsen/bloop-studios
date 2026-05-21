@@ -1,9 +1,7 @@
 {{ define "main" }}
 <div class="app-page">
-
   <header class="app-page__header">
     <div class="container app-page__header-inner">
-
       <div class="app-page__icon">
         {{ with .Params.icon }}
         <img src="{{ . | relURL }}" alt="{{ $.Title }} app icon" />
@@ -29,31 +27,30 @@
         <div class="app-page__actions">
           {{ with .Params.googlePlay }}
           <a href="{{ . }}" class="btn-primary" target="_blank" rel="noopener">
-            <span class="material-symbols-outlined" aria-hidden="true">android</span>
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >android</span
+            >
             Get on Google Play
           </a>
-          {{ end }}
-          {{ with .Params.appStore }}
+          {{ end }} {{ with .Params.appStore }}
           <a href="{{ . }}" class="btn-primary" target="_blank" rel="noopener">
-            <span class="material-symbols-outlined" aria-hidden="true">apple</span>
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >ios</span
+            >
             Download on App Store
           </a>
           {{ end }}
           <a href="/apps" class="btn-secondary">← All apps</a>
         </div>
       </div>
-
     </div>
     <div class="app-page__header-glow" aria-hidden="true"></div>
   </header>
 
   <section class="app-page__body">
     <div class="container app-page__body-inner">
-      <div class="app-page__content single-page__body">
-        {{ .Content }}
-      </div>
+      <div class="app-page__content single-page__body">{{ .Content }}</div>
     </div>
   </section>
-
 </div>
 {{ end }}
