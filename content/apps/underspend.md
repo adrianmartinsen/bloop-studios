@@ -12,21 +12,26 @@ weight: 1
 
 ## What is Underspend?
 
-Underspend combines your grocery list and your budget into a single, focused app. Add items as you shop, watch your running total in real time, and stop the moment you hit your limit. No more mental arithmetic at the checkout, no more nasty surprises.
+Track your grocery budget in real time and never overspend at checkout again. Add items to your list, check them off as you shop and stay in control of what the total will be before you get to the checkout. Works completely offline — no account, no sync, no internet required.
 
 ## Features
 
+### Free, forever:
+
 - Set a budget before you shop and track your spending as you go
-- Build and manage your grocery list inside the same app
 - Price-per-weight calculator so you can compare value between products
-- Barcode scanner to quickly add items using Open Food Facts data
-- Full spending history so you can spot patterns over time
-- Works completely offline — no account, no sync, no internet required
+- Discount calculator makes it easy to add any bargains you find
+
+### Premium unlocks:
+
+- Spending history & analysis — see trends over time and spot where your money actually goes
+- Item templates — save your regulars and add them to any list in one tap
+- Custom lists — organize by store, trip type, or however you shop
 
 ## Privacy
 
-All data stays on your device. Underspend has no analytics, no advertising, and no server to send your data to.
+Underspend has no advertising and no server to send your data to. Your data stays safe on your device. We only collect anonymous analytics data. Choose to opt out any time in the settings page.
 
 ## Pricing
 
-Free 30-day trial, no credit card required. One-time purchase to unlock permanently after the trial.
+Shopping list and budget are free forever. One-time purchase to unlock premium features.
